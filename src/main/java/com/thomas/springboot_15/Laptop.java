@@ -1,6 +1,10 @@
 package com.thomas.springboot_15;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GenerationType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Laptop
