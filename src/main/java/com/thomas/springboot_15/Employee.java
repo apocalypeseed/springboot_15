@@ -1,6 +1,12 @@
 package com.thomas.springboot_15;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GenerationType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.OneToOne;
+import javax.persistence.CascadeType;
+import javax.persistence.JoinColumn;
 
 @Entity
 public class Employee
@@ -13,7 +19,7 @@ public class Employee
     private String ssn;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "laotop_id")
+    @JoinColumn(name = "laptop_id")
     private Laptop laptop;
 
     public int getId() {
